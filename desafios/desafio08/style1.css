@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+main {
+    background-color: rgb(197, 188, 188);
+}
+
+main h1 {
+    color: rgb(49, 46, 46);
+}
+
+main a{
+    color: rgba(0, 0, 0, 0.596);
+}
+
+main a.pag2:hover {
+    color: rgb(7, 68, 7);
+    background-color: rgb(200, 240, 200);
+}
+
+main a.pag3:hover {
+    color: rgb(134, 62, 3);
+    background-color: rgb(247, 247, 145);
+}
