@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caixas</title>
+    <style>
+        h1{
+            background-color: lightgrey;
+            /*Tamanho da caixa - Box Size */
+            height: 300px;
+            width: 300px;
+            /*Configurações de borda */
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategrey;
+            /*Configurações de preenchimento (serve também para margem)*/
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /*Configurações automaticas de margem para centralizá-la, independente do tamanho do navegador*/
+            margin: auto;
+            /*Se quiser transformar uma caixa block em inline ou ao contrário, é só colocar mais uma configuração: display:block, ou display:inline, etc*/
+        }
+
+        a{
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+        }
+
+        h2{
+            background-color: lightgrey;
+            height: 300px;
+            width: 300px;
+           
+            background-color: lightgrey;
+            height: 300px;
+            width: 300px;
+            
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkslategrey;
+            
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 40px;
+            margin-left: 20px;
+
+            outline: 5px;
+            outline-style: dashed;
+            outline-color: salmon;
+        }
+
+        h3{
+            background-color: lightgrey;
+            height: 300px;
+            width: 300px;
+
+            /*Configurando com shorthand*/
+            border: 10px solid darkslategray;
+
+            padding: 10px;
+
+            margin: 20px auto 40px auto;
+
+            outline: 5px dashed salmon;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixa box-level</h1>
+    <p>Parágrafos também são exemplos de box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p>
+    <h2>Exemplo de caixa box-level 2 (não centralizando)</h2>
+    <h3>Usando Shorthand</h3>
+</body>
+</html>

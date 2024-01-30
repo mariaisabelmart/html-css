@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes, ou simplesmente aumente e diminua o tamanho do seu navegador. </p>
+
+    <picture>
+        <!-- o source diz aqui que por padrão ele vai carregar a imagem grande, mas se o navegador tiver menos de 1000px, ele carrega a média-->
+        <!--Geralmente colocar 50px a mais por conta do tamanho da barra de rolagem, para não dar tempo dela aparecer ao reduzir a página-->
+        <!--O segundo source foi criado primeiro, estabelecendo o limite de tamanho a partir do tamanho da imagem maior. O primeiro source foi criado depois, estabelecendo o limite de tamanho a partir do tamanho da imagem média, e assim por diante por quantas imagens quiser.-->
+        <!--Deve seguir essa ordem para funcionar-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo áudio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <!--<audio src="midia/happy-mistake.mp3" controls autoplay></audio>--> 
+    <!--só assim fica meio limitado à compatibilidade do navegador-->
+    <!--Formatos compatíveis: MP3 WAV OGG-->
+    <audio preload="metadata" autoplay controls loop>
+        <!--colocar em ordem do tipo de preferência, para ele tentar na ordem, até um tipo dar certo, ou até exibir o parágrafo. Obs: é preciso ter os arquivos nesses formatos.-->
+        <source src="midia/guanacast-33.mp3" type="audio/mpeg">
+        <source src="midia/guanacast-33.ogg" type="audio/ogg">
+        <source src="midia/guanacast-33.wav" type="audio/wav">
+        <!--Tentar evitar formato wav, porque é muito pesado-->
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/guanacast-33.mp3">Clique aqui para baixar o aqrquivo MP3.</a></p>
+    </audio>
+</body>
+</html>
