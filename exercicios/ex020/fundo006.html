@@ -11,12 +11,21 @@
             background-image: url(imagens/wallpaper002.jpg);
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: cover; /*cover faz a imagem cobrir tudo*/
+            background-size: cover; /*cover faz a imagem cobrir tudo, mas tem opção auto e contain (img completa) também*/
+            background-attachment: fixed;/*mexer no vínculo, ou seja, fazer o fundo vincular com a rolagem: scroll ou fixed*/
+
+            /* Shorthand - background
+                color > image > position > repeat > [size] > attachment
+                obs: o size não funciona, retirar e colocar depois
+
+                background: black url(imagens/wallpaper002.jpg) center center no-repeat fixed;
+                background-size:cover;
+            */
         }
 
         main{
             background-color: white;
-            width: 400px;
+            max-width: 400px;
             padding: 10px; /*o espaço entre a borda e o texto*/
             margin: auto;
             border: 1px solid rgb(4, 4, 32);
@@ -27,6 +36,12 @@
 <body>
     <main>
         <h1>Teste de imagem de fundo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam voluptas perferendis dolor accusamus debitis, fugit possimus tempore qui accusantium obcaecati dolores tempora nihil impedit eaque placeat, asperiores cupiditate itaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni aperiam possimus earum quis, alias atque? Aspernatur odio dicta non impedit voluptate aut cupiditate molestias quis nam numquam quidem, magni commodi? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe esse molestias quidem eaque recusandae doloribus cumque hic, perferendis beatae delectus dignissimos optio, necessitatibus modi ut culpa ab. Doloribus, mollitia rem.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam voluptas perferendis dolor accusamus debitis, fugit possimus tempore qui accusantium obcaecati dolores tempora nihil impedit eaque placeat, asperiores cupiditate itaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni aperiam possimus earum quis, alias atque? Aspernatur odio dicta non impedit voluptate aut cupiditate molestias quis nam numquam quidem, magni commodi? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe esse molestias quidem eaque recusandae doloribus cumque hic, perferendis beatae delectus dignissimos optio, necessitatibus modi ut culpa ab. Doloribus, mollitia rem.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam voluptas perferendis dolor accusamus debitis, fugit possimus tempore qui accusantium obcaecati dolores tempora nihil impedit eaque placeat, asperiores cupiditate itaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni aperiam possimus earum quis, alias atque? Aspernatur odio dicta non impedit voluptate aut cupiditate molestias quis nam numquam quidem, magni commodi? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe esse molestias quidem eaque recusandae doloribus cumque hic, perferendis beatae delectus dignissimos optio, necessitatibus modi ut culpa ab. Doloribus, mollitia rem.
+        </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus nam voluptas perferendis dolor accusamus debitis, fugit possimus tempore qui accusantium obcaecati dolores tempora nihil impedit eaque placeat, asperiores cupiditate itaque! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni aperiam possimus earum quis, alias atque? Aspernatur odio dicta non impedit voluptate aut cupiditate molestias quis nam numquam quidem, magni commodi? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe esse molestias quidem eaque recusandae doloribus cumque hic, perferendis beatae delectus dignissimos optio, necessitatibus modi ut culpa ab. Doloribus, mollitia rem.
         </p>
     </main>
