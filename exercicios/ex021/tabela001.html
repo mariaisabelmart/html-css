@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table{
+            width: 400px;
+            height: 200px;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px;
+            border: 1px solid black;
+            text-align: center;
+            vertical-align: middle; /*top ou bottom também (para alinhar o texto verticalmente)*/
+        }
+
+        .principal {
+            background-color: rgb(151, 204, 186);
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+   <h1>Minha primeira tabela</h1> 
+   <!--
+        HIERARQUIA DE TABELA (SIMPLES)
+        TABLE = tabela
+            TABLE ROW = linha de tabela
+                TABLE HEADER = cabeçalho de tabela
+                TABLE DATA = dado de tabela 
+    -->
+   <table>
+        <tr class="principal"> <!--1ª linha-->
+            <td> </td><!--dados-->
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+        </tr>
+        <tr> <!--2ª linha-->
+            <td class="principal">1</td>
+            <td>A1</td> 
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr> <!--3ª linha-->
+            <td class="principal">2</td>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr><!--4ªlinha-->
+            <td class="principal">3</td>
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr> <!--5ª linha-->
+            <td class="principal">4</td>
+            <td>A4</td>
+            <td>B4</td>
+            <td>C4</td>
+        </tr>
+   </table>
+</body>
+</html>
