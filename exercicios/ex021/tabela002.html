@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative; /*p/ fixar o cabeçalho da tabela precisa estar configurado como relative*/
         }
 
         th, td {
@@ -20,14 +21,28 @@
             padding: 10px;
         }
 
-        thead {
+        caption{
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: rgba(211, 211, 211, 0.699);
+        }      
+
+        thead, tfoot {
             background-color: gray;
             color: white;
         }
 
-        tfoot > tr {
+        thead > tr > th {
+            position: sticky; /*colar*/
+            top: -1px; /*no topo*/
             background-color: gray;
-            color: white;
+            /*Configurações para tornar o cabeçalho da tabela fixo ao topo*/
+        }
+
+        tbody > tr:nth-child(odd) {
+            background-color: lightgray;
+            /*usando a pseudo-classe nth-child é possível criar o efeito zebrado, e pode-se aplicar qualquer configuração nela (fundo, letra, etc)*/
         }
 
         td.num {
@@ -40,6 +55,7 @@
     <!--
         ANATOMIA DE TABELAS GRANDES
         TABLE
+            CAPTION (legenda)
             THEAD (cabeçalho)
                 TR, TD, TH
             TBODY (corpo)
@@ -49,10 +65,12 @@
         Não é obrigatório ter todas essas partes        
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 90px;">População</th>
+                <!--scope é para dizer aos mecanismos de busca se o título diz respeito ao conteúdo da coluna ou linha-->
             </tr>
         </thead>
         <tbody>
@@ -167,10 +185,16 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de habitantes</th>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>199.950.706</strong></td>
             </tr>
         </tfoot>
     </table>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quasi nobis culpa incidunt dicta perspiciatis dolore excepturi accusantium, aperiam quam, saepe veniam asperiores iusto ratione amet eum quisquam, nisi explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur sint animi nostrum mollitia. Natus, vel error, nesciunt quia culpa aliquam laborum maxime ex quasi quidem, odio eius harum. Molestiae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae odit impedit sint ducimus numquam suscipit fugiat quos accusamus minus blanditiis nostrum quia architecto inventore nemo porro natus, sit distinctio molestiae.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quasi nobis culpa incidunt dicta perspiciatis dolore excepturi accusantium, aperiam quam, saepe veniam asperiores iusto ratione amet eum quisquam, nisi explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur sint animi nostrum mollitia. Natus, vel error, nesciunt quia culpa aliquam laborum maxime ex quasi quidem, odio eius harum. Molestiae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae odit impedit sint ducimus numquam suscipit fugiat quos accusamus minus blanditiis nostrum quia architecto inventore nemo porro natus, sit distinctio molestiae.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quasi nobis culpa incidunt dicta perspiciatis dolore excepturi accusantium, aperiam quam, saepe veniam asperiores iusto ratione amet eum quisquam, nisi explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur sint animi nostrum mollitia. Natus, vel error, nesciunt quia culpa aliquam laborum maxime ex quasi quidem, odio eius harum. Molestiae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae odit impedit sint ducimus numquam suscipit fugiat quos accusamus minus blanditiis nostrum quia architecto inventore nemo porro natus, sit distinctio molestiae.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quasi nobis culpa incidunt dicta perspiciatis dolore excepturi accusantium, aperiam quam, saepe veniam asperiores iusto ratione amet eum quisquam, nisi explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur sint animi nostrum mollitia. Natus, vel error, nesciunt quia culpa aliquam laborum maxime ex quasi quidem, odio eius harum. Molestiae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae odit impedit sint ducimus numquam suscipit fugiat quos accusamus minus blanditiis nostrum quia architecto inventore nemo porro natus, sit distinctio molestiae.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quasi nobis culpa incidunt dicta perspiciatis dolore excepturi accusantium, aperiam quam, saepe veniam asperiores iusto ratione amet eum quisquam, nisi explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur sint animi nostrum mollitia. Natus, vel error, nesciunt quia culpa aliquam laborum maxime ex quasi quidem, odio eius harum. Molestiae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae odit impedit sint ducimus numquam suscipit fugiat quos accusamus minus blanditiis nostrum quia architecto inventore nemo porro natus, sit distinctio molestiae.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero quasi nobis culpa incidunt dicta perspiciatis dolore excepturi accusantium, aperiam quam, saepe veniam asperiores iusto ratione amet eum quisquam, nisi explicabo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt aspernatur sint animi nostrum mollitia. Natus, vel error, nesciunt quia culpa aliquam laborum maxime ex quasi quidem, odio eius harum. Molestiae? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae odit impedit sint ducimus numquam suscipit fugiat quos accusamus minus blanditiis nostrum quia architecto inventore nemo porro natus, sit distinctio molestiae.</p>
 </body>
 </html>
