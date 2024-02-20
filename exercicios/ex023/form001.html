@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meu primeiro formulário</h1>
+    <!--Todo formulário precisa estar dentro da tag form-->
+    <!--o action é a ação que vai ser realizada ao clicar no botão enviar (no caso, um documento do PHP)-->
+    <!--autocomplete off é para tirar o quadro de opções, já usadas, para completar uma caixa de texto-->
+    <!--method (GET(padrão) ou POST) é para ocultar ou não os dados enviados, porque se não ocultar eles aparecem na URL. Mas ocultá-los não é criptografá-los, visto que ainda ficam visíveis no inspecionar. Usar GET quando os dados não forem sensíveis ou quando quiser que a URL seja compartilhável, apenas-->
+    <!--caso o conteúdo inteiro do formulário ultrapasse aprox. 3000 letras, usar POST, assim como caso tenha o envio de imagens ou dados sensíveis (aprender sobre HTTPS)-->
+    <form action="cadastro.php" method="post" autocomplete="off">
+        <!--label é a etiqueta, o que relaciona o "Nome" com o input "nome" por exemplo, e para isso precisa colocar o id, no for-->
+        <!--input é onde o usuário vai entrar com dados-->
+        <!--input text: caixa para texto-->
+        <!--input submit: botão de enviar, por exemplo-->
+        <p><label for="inome">Nome:</label> 
+            <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> 
+            <input type="text" name="sobrenome" id="isobrenome"><p>
+        <p><input type="submit" value="Enviar"></p>
+    </form>
+    <!--O name é mais importante como identificador no PHP, e o id no JavaScript.-->
+</body>
+</html>
