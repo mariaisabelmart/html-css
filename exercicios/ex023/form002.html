@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário: </label>
+            <!--usando atributo de preenchimento obrigatório (required)-->
+            <!--usando atributos de quantidade máxima e mínima de caracteres (bom usar ambos - máx e mín)-->
+            <!--usando atributo para limitar quantas letras a caixa vai mostrar-->
+            <!--usando atributo para colocar dica dentro da caixa (placeholder)-->
+            <input type="text" name="usu" id="iusu" required minlength="5" maxlength="15" size="10" placeholder="nome do usuário" autocomplete="username">
+            <!--É possível usar o autocomplete no input, para personalizar o tipo de dado que vai ter autocomplete. P/ isso, deve estar on no form-->
+        </p>        
+        <p>
+            <label for="isen">Senha: </label>
+            <!--usando input para senhas-->
+            <input type="password" name="sen" id="isen" required minlength="8" maxlength="20" size="9" placeholder="mínimo 8 letras" autocomplete="current-password">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <!--usando input para limpar dados-->
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
