@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <!--Usando input para cores-->
+            <!--Para preestabelecer uma cor, usar value e o código da cor-->
+            <label for="icor">Cor</label>
+            <input type="color" name="cor" id="icor" value="#00ff00">
+        </p>
+
+        <p>
+            <!--Usando input para níveis-->
+            <!--Para alterar os níveis, usar min e max. Para preestabelecer um valor, usar value-->
+            <label for="inivel">Nível de satisfação</label>
+            <input type="range" name="nivel" id="inivel" min="1" max="5" value="1">
+        </p>
+
+        <p>
+            <!--Usando input file, para imagem que o usuário escolhe-->
+            <!--Existe o input image, mas é o dev que escolhe a imagem-->
+            <!--para usar esse input, o method do form deve ser POST-->
+            <label for="ifoto">Foto do perfil</label>
+            <input type="file" name="foto" id="ifoto">
+
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
