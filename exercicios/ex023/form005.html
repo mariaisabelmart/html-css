@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de formulário</h1>
+    <form action="cadastro.php" autocomplete="on" method="get">
+        <fieldset>
+            <legend>Sexo</legend>
+            <!--Usando input radio button-->
+            <!--Colocar o mesmo name para todas as opções, para que possa ficar somente uma opção marcada sempre, sem possibilidade de marcar duas (ao clicar na segunda, desmarca a primeira)-->
+            <input type="radio" name="sexo" id="sxmas" value="M"> <label for="sxmas">Masculino</label><br>
+            <input type="radio" name="sexo" id="sxfem" value="F"> <label for="sxfem">Feminino</label>
+            <!--Foi colocado value para aparecer o valor escolhido no envio do formulário-->
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <!--Usando input checkbox (o label faz com que dê check também quando clicar na palavra)-->
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="escor" id="iescor"> <label for="iescor">Corrida</label> <br>
+            <input type="checkbox" name="esmus" id="iesmus"> <label for="iesmus">Musculação</label>
+        </fieldset>
+        <!--Caso queira que uma opção já apareça marcada ao abrir a pág, dentro do input colocar CHECKED (para checkbox e radio button)-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>

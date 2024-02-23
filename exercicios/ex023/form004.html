@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados pessoais</legend>
+            <p>
+                <label for="inome">Nome</label>
+                <input type="text" name="nome" id="inome" required minlength="5" maxlength="20">
+            </p>
+            <p>
+                <!--Usando input e-mail-->
+                <label for="iemail">E-mail</label>
+                <input type="email" name="email" id="iemail" required autocomplete="email">
+            </p>
+            <p>
+                <!--Usando input para telefone-->
+                <label for="itel">Telefone</label>
+                <input type="tel" name="tel" id="itel" autocomplete="tel" required pattern="^\d{4,5}-\d{4}$" placeholder="xxxx-xxxx">
+                <!--ou pattern="^[0-9]{4,5}-[0-9]{4}$"-->
+                <!--o pattern (padrão) foi usado para colocar uma EXPRESSÃO REGULAR(RegEx) para telefone, ou seja, aumentar a validação.-->
+                <!--Uma expressão regular sempre começa com ^ e termina com $. Esta: o telefone deve ter dígitos (4 ou 5), depois um traço, e por último mais dígitos (4)-->
+                <!--com DDD: pattern="^\(\d{2}\)\d{4,5}-\d{4}$", ou seja, o \( é para abrir parênteses, e o \d é para dígitos-->
+            </p>
+        </fieldset>
+        <!--Estudar sobre RegEx-->
+        <!--fieldset é para colocar os input em um grupo de campos-->
+        <!--Legend é para colocar um título no grupo de campos-->
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+</html>
