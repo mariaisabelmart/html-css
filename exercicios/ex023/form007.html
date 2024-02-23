@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+   <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <!--label para o título do select-->
+            <label for="iest">Estado</label>
+            <!--Usando select-->
+            <select name="estado" id="iest">
+                <!--para select, utiliza-se option-->
+                <!--geralmente criam esse primeiro option para ser apresentado de início ao usuário-->
+                <!--O selected é para deixar o valor preestabelecido-->
+                <option value="" selected>---Escolha---</option>
+                <optgroup label="Região Sudeste">
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+                <!--optgroup é para agrupar opções-->
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="PE">Pernambuco</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <!--Usando data list-->
+            <!--Serve para aparecer uma caixa de texto, que a pessoa pode digitar outra opção, mas aparece uma lista de possíveis opções-->
+            <label for="iprof">Profissão</label>
+            <!--É preciso adicionar no input o atributo list, com o id da lista-->
+            <input type="text" name="prof" id="iprof" list="lstprof">
+            <datalist id="lstprof"> <!--deve ter um id para colocar no input em list-->
+                <option value="ADM">Administrador</option>
+                <option value="CONT">Contador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+                <option value="VEND">Vendedor</option>
+                <!--Se quiser que não apareça a sigla, é só tirar o value-->
+                <!--o optgroup não funcionou aqui-->
+            </datalist>
+        </p>
+
+        <p>
+            <!--Usando textarea-->
+            <!--Para criar uma área de texto-->
+            <label for="imsg">Mensagem</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+            <!--os valores são para quantas colunas e linhas vai aparecer (não é limite, textarea é infinito)-->
+            <!--Usar com method POST-->
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+   </form>
+</body>
+</html>
