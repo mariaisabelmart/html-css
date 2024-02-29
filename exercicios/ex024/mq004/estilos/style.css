@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
-/*Versão Mobile First*/
+/*Versão Mobile First
+Propõe construir primeiro a versão para celulares*/
 
 * {
     font-family: Arial, Helvetica, sans-serif;
